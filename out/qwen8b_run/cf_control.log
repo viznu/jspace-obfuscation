@@ -1,0 +1,18 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5208.24it/s]
+=== condition: control (thinking=True) ===
+Population buckets: {'succ+leaked': 60, 'succ+concealed': 13, 'fail+leaked': 2}
+MAIN population (successful): 36 positives, 37 matched negatives
+
+=== AUROC: target-is-bridge vs answer/prompt-matched (successful) ===
+lens:band                  AUROC          95% CI    R>maxneg
+--------------------------------------------------------------
+jlens:mid(10-22)           0.914   [0.84, 0.97]         0.69
+logit_lens:mid(10-22)      0.781   [0.66, 0.88]         0.33
+jlens:late(23-34)          0.985   [0.96, 1.00]         0.89
+logit_lens:late(23-34)     0.999   [1.00, 1.00]         0.97
+jlens:last4(31-34)         0.983   [0.95, 1.00]         0.89
+logit_lens:last4(31-34)    0.999   [1.00, 1.00]         0.97
+
+Read: AUROC>0.5 with tight CI = real specificity. jlens:mid beating logit_lens:* = workspace, not late output-association. If only late/last4 separate and jlens~logit_lens there, it's answer-neighbor monitoring.

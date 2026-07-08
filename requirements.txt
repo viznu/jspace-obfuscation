@@ -1,0 +1,7 @@
+# Laptop spine (analysis + tests): stdlib only. pytest for the test runner.
+pytest>=8.0
+
+# GPU box (real runs) — install separately on the fitting/rollout machine:
+#   torch, transformers, accelerate, peft   (LoRA for rung 1)
+#   jlens  — pip install git+https://github.com/anthropics/jacobian-lens
+# (jlens is a reference impl; pin the commit you fit against.)

@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8391.17it/s]
+  depth 0 done
+  depth 1 done
+  depth 2 done
+  depth 3 done
+  depth 4 done
+  depth 5 done
+  depth 6 done
+
+=== DIRECT-LOGIT J-space monitor: recall@FPR<=1% ===
+group            d0     d1     d2     d3     d4     d5     d6   
+------------------------------------------------------------
+ALL              0.167  0.2    0.233  0.2    0.3    0.367  0.367
+named_entity     0.5    0.4    0.7    0.9    0.7    0.8    0.8  
+semantic         0.5    0.7    0.9    0.1    0.7    0.3    0.2  
+numeric          0.1    0.1    0.0    0.0    0.0    0.2    0.3  
+
+Compare to top-k membership (corrected, per-type d0->d6): entity 0.70->0.90, semantic 0.40->0.20, numeric 0.10->0.10

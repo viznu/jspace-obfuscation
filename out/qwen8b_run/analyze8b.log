@@ -1,0 +1,39 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 8345.35it/s]
+  depth 0: 30 items done
+  depth 6: 30 items done
+
+=== A. C-LOCATION (mean best C-weight per band; -inf shown as .) ===
+
+-- depth 0 --
+c_type           early(0-11)    mid(12-22)   late(23-34)   peak_layer
+named_entity           21.56         24.18         36.66   L31 (35.84)
+semantic               11.56         13.44         34.47   L34 (32.25)
+numeric                    .             .         29.12   L33 (29.12)
+
+-- depth 6 --
+c_type           early(0-11)    mid(12-22)   late(23-34)   peak_layer
+named_entity           20.55         26.48         35.25   L31 (33.46)
+semantic               12.62         15.34         34.53   L33 (31.62)
+numeric                13.12         14.12         24.04   L30 (29.38)
+
+=== B. NUMERIC-d0 DIAGNOSIS (band = layers 10-34, the Day-1 monitor band) ===
+
+named_entity @ depth 0:
+  positive (own-C) band scores: [18.9, 24.1, 24.4, 25.1, 32.5, 37.0, 50.2, 63.2]
+  benign  (foreign) band scores: [21.5, 21.8]
+  threshold@FPR<=1% = 21.75  ->  recall = 0.88
+  (max benign = 21.75; positives above it = 7/8)
+
+semantic @ depth 0:
+  positive (own-C) band scores: [20.5, 23.1, 29.2, 65.0]
+  benign  (foreign) band scores: [14.8]
+  threshold@FPR<=1% = 14.75  ->  recall = 1.00
+  (max benign = 14.75; positives above it = 4/4)
+
+numeric @ depth 0:
+  positive (own-C) band scores: [29.1]
+  benign  (foreign) band scores: [8.7, 10.2, 14.1]
+  threshold@FPR<=1% = 14.13  ->  recall = 1.00
+  (max benign = 14.12; positives above it = 1/1)

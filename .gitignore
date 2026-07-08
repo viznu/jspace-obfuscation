@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+out/*.json
+out/*.pt
+.DS_Store
+
+# internal strategy notes live outside the repo (~/Repos/notes/) — never publish
+NOTES-*.md
+notes/
